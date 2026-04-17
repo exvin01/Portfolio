@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>exvin Portfolio contacts</title>
+</head>
+  <style>
+  body{
+       margin: 40px;
+      font-family: verdana;
+      background: darkgrey;
+      background-image: url(matrix image.jpg);
+      display: grid;
+      justify-content: center;
+     }
+     .menu{
+         display: flex;
+         border: 1px solid #fff;
+         font-size: 2em;
+         margin-left: 70px;
+         padding: 30px;
+         padding-top: 25px;
+         padding-bottom: 25px;
+         text-align: center;
+         justify-content: space-between;
+         background: darkgrey;
+         color: #fff;
+         position: fixed;
+         width: 70%;
+         z-index: 100;
+     }
+
+     .menu:hover{
+          transform: scale(1.10);
+     }
+       .ContactMe{
+          border: 2px solid #fff;
+        border-radius: 5px;
+        display: flex;
+        margin-top: 50px;
+        padding-bottom: 50px;
+        background: #fffc;
+         font-family: "Comic Sans MS", cursive, sans-serif;
+        font-size: 2em;
+        padding-left: 20px;
+        height: auto;
+       display: grid;
+       color:#333;
+       width: 100%;
+       box-shadow: 5px 3px 2px 2px black;
+
+   }
+   .me:hover{
+       transform: scale(1.2);
+   }
+
+   .footer{
+      margin-left: 150px;
+       margin-top: 50px;
+       font-family:  Courier New,  monospace;
+       font-size: 2em;
+       color: #fffc;
+       text-shadow: 0 0 5px #fffc;
+       margin-top: 150px;
+   }
+  </style>
+<body>
+     <!-- Header bar!-->
+    <div class="menu">
+          <code id="Home"style="cursor: pointer;">HOME</code> |
+          <code id="AboutMe"style="cursor: pointer;">ABOUT ME</code> |
+          <code id="items"style="cursor: pointer;">ITEMS</code>   |
+          <code id="Services"style="cursor: pointer;">SERVICES</code>|
+          <code id="Contact"style="cursor: pointer; color: darkblue;">CONTACT</code>
+   </div>
+    <p  class="me"style="color: #fff; margin: auto; font-size: 2em;
+             font-family: courier New, monospace; font-style: italic;
+             margin-top: 200px;
+             ">
+              follow me on </p>
+
+      <!--get in touch !-->
+      <div class="ContactMe">
+
+                       <img id="WhatsappIcon" src="whatsapp icon.jpg"
+                        width="72" height="72"
+                       style="border: 2px solid black;cursor: pointer;
+                         border-radius: 40px 40px; padding: 3px; margin-top: 35px; margin-left: 50px;"
+                       alt="Whatsapp Image in this site" />
+                       Click the Whatsapp icon above to find me
+
+                          <img id="FacebookIcon" src="facebook icon.png"
+                        width="72" height="72"
+                       style="border: 2px solid black; margin-top: 35px;
+                       border-radius: 40px 40px; padding: 3px; margin-left: 50px; cursor: pointer;"
+                       alt="facebook Image in this site" />
+                       Click the facebook icon above to find me
+
+                       <img id="EmailIcon" src="email icon.png"
+                       width="72" height="72"
+                       style="border: 2px solid black; margin-top: 35px;
+                      border-radius: 40px 40px; padding: 3px; margin-left: 50px; cursor: pointer;"
+                       alt="facebook Image in this site" />
+                       Click the email icon above to email me
+
+                       <img id="CallIcon" src="phone call icon.png"
+                        width="72" height="72"
+                       style="border: 2px solid black;cursor: pointer;
+                     border-radius: 40px 40px; padding: 3px; margin-top: 35px;
+                       margin-left: 50px; "
+                       alt="call Image in this site" />
+                       Click the contact icon above to call me
+           </div>
+      </div>
+            <p class="footer">&copy Exvin Chipwere 2026</p>
+
+
+      <script>
+          //menu bar
+      const Home = document.getElementById("Home");
+        const AboutMe = document.getElementById("AboutMe");
+        const items = document.getElementById("items");
+        const Services = document.getElementById("Services");
+        const Contact = document.getElementById("Contact");
+
+         Home.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "index.htm";
+                    });
+
+          AboutMe.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "my profile.htm";
+                    });
+
+         items.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "items.htm";
+                    });
+
+         Services.addEventListener("click",
+                function(event){
+                     event.preventDefault();//prevent the page from reload
+                     window.location.href = "services.htm";
+                });
+
+
+        //contact me eng exvin chipwere
+       const WhatsappIcon = document.getElementById("WhatsappIcon");
+       const FacebookIcon = document.getElementById("FacebookIcon");
+        const EmailIcon = document.getElementById("EmailIcon");
+         const CallIcon = document.getElementById("CallIcon");
+
+         WhatsappIcon.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "//wa.me/265897910448";
+                    });
+
+          FacebookIcon.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "";
+                    });
+
+         EmailIcon.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "mailto:chipwereexvin@gmail.com";
+                    });
+
+        CallIcon.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "tel:+265985091034";
+                    });
+      </script>
+
+</body>
+
+</html>

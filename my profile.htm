@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>Exvin portfolio profile</title>
+</head>
+    <style>
+    body{
+       margin: 40px;
+      font-family: verdana;
+      background-image: url(m4.jpg);
+      display: grid;
+      justify-content: center;
+     }
+    .menu{
+         display: flex;
+         border: 1px solid #fff;
+         font-size: 2em;
+         margin-left: 70px;
+         padding: 30px;
+         padding-top: 25px;
+         padding-bottom: 25px;
+         text-align: center;
+         justify-content: space-between;
+         background: darkgrey;
+         color: #fff;
+         position: fixed;
+         width: 70%;
+         z-index: 100;
+     }
+     .menu:hover{
+          transform: scale(1.10);
+     }
+     .footer{
+      margin-left: 150px;
+       margin-top: 50px;
+       font-family:  Courier New,  monospace;
+       font-size: 2em;
+       color: #fffc;
+       text-shadow: 0 0 5px #fffc;
+   }
+    </style>
+<body>
+        <!-- Header bar!-->
+ <div class="menu">
+    <code id="Home"style="cursor: pointer; ">HOME</code> |
+    <code id="AboutMe"style="cursor: pointer; color: darkblue;">ABOUT ME</code> |
+    <code id="items"style="cursor: pointer;">ITEMS</code>   |
+    <code id="Services"style="cursor: pointer;">SERVICES</code>|
+    <code id="Contact"style="cursor: pointer;">CONTACT</code>
+</div>
+
+<!--exvin profile!-->
+
+            <div style="display: grid;  margin: 120px; font-family: courier New, monospace
+            ; color: #fff; font-size: 2em;">
+                 <img src="exvin web photo.jpg"
+                 style="border-radius: 590px;  width: 250px; height: auto;
+                 margin: auto; border:5px solid #fff;
+                " alt="exvin photo here">
+                 <div style="margin-top: 50px; font-style: italic; margin-right: -100px;
+                 margin-left: -100px;">
+                     Engineer Exvin Chipwere<br><br>
+                     Exvin Chipwere is a Malawian man and he was  born on 30 may 2003.
+                       He start his education at changalume primary school and then he is selected
+                       at Malawi Army secondary school where he obtain his Malawi School Certificate of Education
+                       (MSCE) in year 2021. Then after he went to University of Malawi where
+                       he start his career in Information Technology and he study advanced diploma
+                       in professional computer engineering under the board of ABMA Uk exams.
+                       besides that he is also a holder of certificate in web development where he conduct it online
+                       in year 2025 at oche school of ICT, Nigeria.<br><br>
+                       Eng. Chipwere he was a former ict instructor under go digital malawi vision 2063.
+                       He was also a former ict tutor at great destiny ict school.
+                       Currently he is working as office administrator at class world ict center
+                       <br><br>
+                 </div>
+            </div>
+                 <p class="footer">&copy Exvin Chipwere 2026</p>
+      <script>
+         //menu bar box
+        const Home = document.getElementById("Home");
+        const AboutMe = document.getElementById("AboutMe");
+        const items = document.getElementById("items");
+        const Services = document.getElementById("Services");
+        const Contact = document.getElementById("Contact");
+
+         Home.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "index.htm";
+                    });
+
+         items.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "items.htm";
+                    });
+
+          Contact.addEventListener("click",
+                function(event){
+                     event.preventDefault();//prevent the page from reload
+                     window.location.href = "contact me.htm";
+                });
+
+         Services.addEventListener("click",
+                function(event){
+                    event.preventDefault();//prevent page from reload
+                    window.location.href = "services.htm";
+                    });
+      </script>
+</body>
+
+</html>
