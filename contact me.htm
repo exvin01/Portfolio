@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <title>exvin Portfolio contacts</title>
+</head>
+  <style>
+  body{
+      font-family: verdana;
+      background: #000;
+      display: grid;
+     }
+     .menu{
+         display: flex;
+         border: 1px solid #fff;
+         font-size: 2em;
+         margin-left: 70px;
+         padding: 30px;
+         padding-top: 25px;
+         padding-bottom: 25px;
+         text-align: center;
+         justify-content: space-between;
+         background: darkgrey;
+         color: #fff;
+         position: fixed;
+         width: 70%;
+         z-index: 100;
+     }
+
+     .menu:hover{
+          transform: scale(1.10);
+     }
+      .heading{
+    display: grid;
+    width: 100%;
+    height: 320px;
+   }
+    img{
+    width: 100vw;
+    height: 600px;
+   }
+   .contactus{
+    position: absolute;
+    top: 210px;
+    left: 400px;
+    color: #fff;
+    font-size: 2em;
+    border: 3px solid #fff;
+    padding: 20px;
+    width: auto;
+   }
+  .contentbody{
+    font-size: 2em;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: #df9c0b;
+    text-align: center;
+  } 
+  .contents{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .icons{
+    border-radius: 50px 50px 50px 50px;
+    height: 100px;
+    width: auto;
+    margin-left: 20px;
+  }
+  .form{
+    display: grid;
+    font-size: 2em;
+  }
+  .form input{
+    font-size: 0.5em;
+    padding: 10px;
+    margin: 20px;
+    border: none;
+  }
+  .form textarea{
+    font-size: 0.5em;
+    padding: 10px;
+    margin: 20px;
+    border: none;
+  }
+  .form button{
+    font-size: 0.5em;
+    background-color: #df9c0b;
+    color: #000;
+    border: none;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .footering{
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+  }
+  .footering img{
+    border-radius: 50px 50px 50px 50px;
+    height: 100px;
+    width: auto;
+  }
+  .devname{
+      font-size: 2em;
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+  }
+  </style>
+<body>
+     <!-- Header bar!-->
+    <div class="menu">
+          <code id="Home"style="cursor: pointer;">HOME</code> |
+          <code id="AboutMe"style="cursor: pointer;">ABOUT ME</code> |
+          <code id="Items"style="cursor: pointer;">ITEMS</code>   |
+          <code id="Services"style="cursor: pointer;">SERVICES</code>|
+          <code id="Contact"style="cursor: pointer; color: darkblue;">CONTACT</code>
+   </div>
+    <div heading>
+      <img src="online classes.jpeg">
+      <p class="contactus">CONTACT US</p>
+    </div>
+
+    <div class="contentbody">
+        <p>Get in touch with us!</p>
+
+        <div class="contents">
+            <p style="margin-left: 20px;"> 
+              <img class="icons" src="phone call icon.jpeg" alt="call icon in this site"><br>
+              <code style="color: #fff">Phone CAll</code><br>
+              <code>+265-985-091-034</code><br>
+              <code>+265-897-910-448</code>
+                 </p> 
+                    <hr>
+                 <p style="margin-left: 20px;">
+              <img class="icons" src="location icon.jpg" alt="location icon in this site"><br>
+              <code style="color: #fff">Lilongwe</code><br>
+              <code>Area 25</code><br>
+              <code>Malawi</code>
+             </p> 
+                 <hr>
+             <p style="margin-left: 20px;"> 
+              <img class="icons" src="email icon.jpeg" alt="email icon in this site"><br>
+              <code style="color: #fff">Email</code><br>
+              <code>chipwereexvin@gmail.com</code><br>
+              <code>elightitsolutions@gmail.com</code>
+              
+             </p> 
+
+        </div>
+        <br>
+        <p style="color: #fff;">IF YOU GOT ANY QUESTIONS</p>
+        <p style="color: #fff;">PLEASE DO NOT HESTATE TO SEND US A MESSAGE</p>
+        <form  class="form" action="" method="post">
+           <input type="text" required name="fullname" placeholder="Enter Your Full Name">
+           <input type="email" required name="email" placeholder="Enter A valid Email Account">
+           <textarea rows="20" columns="30" required name="discription" placeholder="Discribe Your Feedback or any quarry or Help"></textarea>
+           <button>SEND MESSAGE</button>
+       </form>
+       <br><br>
+       <p style="color: #df9c0b; font-style: italic;">Connect with us!</p>
+
+    </div>
+        
+        <div class="footering">
+           <img id="instagramIcon" src="instagram icon.jpeg" alt="IG image here">
+           <img id="facebookIcon" src="facebook icon.jpeg" alt="FB image here">
+           <img id="whatsappIcon" src="whatsapp icon.jpeg" alt="WAP image here">
+           <img id="emailIcon" src="email icon.jpeg" alt="Email image here">
+        </div>
+            <code class="devname">
+               &copy Exvin Chipwere 2026
+           </code>
+      </div>
+      
+  
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
