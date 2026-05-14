@@ -34,7 +34,7 @@ app.post('/submit', async (req, res) => {
 });
 
 //connecting with the frontend
-const path = require('path');
+
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
