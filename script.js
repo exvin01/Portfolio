@@ -36,7 +36,7 @@ const Items = document.getElementById("Items");
 
 Home.addEventListener('click', (event) =>{
     event.preventDefault();
-    window.location.href = "index.htm";
+    window.location.href = "index.html";
 });
 AboutMe.addEventListener("click", (event) =>{
     event.preventDefault();
