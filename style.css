@@ -136,7 +136,7 @@ body{
 }
 .formbox{
   font-size: 2em;
-  border: 1px solid #df9c0b;
+  border: 2px solid #df9c0b;
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -144,6 +144,7 @@ body{
   margin-bottom: 50px;
   margin-top: 50px;
   width: 800px;
+       border-radius: 12px;
 }
 .form{
     display: grid;
@@ -151,27 +152,29 @@ body{
     margin-bottom: 50px;
   }
   .form input{
-    font-size: 0.5em;
-    padding: 10px;
+    font-size: 0.6em;
+    padding: 17px 45px 17px 16px;
     margin: 20px;
     border: none;
+         border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   }
   .form input:hover{
     transform: scale(1.05);
   }
   .form textarea{
-    font-size: 0.5em;
-    padding: 10px;
+    font-size: 0.6em;
+    padding: 17px 45px 17px 16px;
     margin: 20px;
     border: none;
+         border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   }
   .form textarea:hover{
     transform: scale(1.05);
   }
   .form button{
-    font-size: 0.5em;
+    font-size: 0.7em;
     background-color: #df9c0b;
     color: #000;
     border: none;
@@ -179,3 +182,5 @@ body{
     margin: auto;
     padding: 10px;
     margin-top: 20px;
+         border-radius: 12px;
+  }

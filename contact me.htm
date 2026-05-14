@@ -46,12 +46,14 @@
     left: 400px;
     color: #fff;
     font-size: 2em;
-    border: 3px solid #fff;
+     font-weight: bold;
+     font-family: Times New Roman;
+    border: 3px solid #df9c0b;
     padding: 20px;
     width: auto;
    }
   .contentbody{
-    font-size: 2em;
+    font-size: 1.5em;
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -59,10 +61,12 @@
     text-align: center;
   } 
   .contents{
-    display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    display: grid;
   }
+.contentbox{
+  border: 1px solid #fff;
+  padding: 37px 45px 37px 45px;
+}
   .icons{
     border-radius: 50px 50px 50px 50px;
     height: 100px;
@@ -75,18 +79,20 @@
   }
   .form input{
     font-size: 0.5em;
-    padding: 10px;
+    padding: 17px 45px 17px 16px;
     margin: 20px;
     border: none;
+    border-radius: 15px;
   }
   .form textarea{
     font-size: 0.5em;
     padding: 10px;
     margin: 20px;
     border: none;
+    border-radius: 12px;
   }
   .form button{
-    font-size: 0.5em;
+    font-size: 0.7em;
     background-color: #df9c0b;
     color: #000;
     border: none;
@@ -94,6 +100,7 @@
     margin: auto;
     padding: 10px;
     margin-top: 20px;
+    border-radius: 15px;
   }
   .footering{
     justify-content: center;
@@ -131,21 +138,21 @@
         <p>Get in touch with us!</p>
 
         <div class="contents">
-            <p style="margin-left: 20px;"> 
+            <p style="margin-left: 20px;" class="contentbox"> 
               <img class="icons" src="phone call icon.jpeg" alt="call icon in this site"><br>
               <code style="color: #fff">Phone CAll</code><br>
               <code>+265-985-091-034</code><br>
               <code>+265-897-910-448</code>
                  </p> 
-                    <hr>
-                 <p style="margin-left: 20px;">
+               
+                 <p style="margin-left: 20px;" class="contentbox">
               <img class="icons" src="location icon.jpg" alt="location icon in this site"><br>
               <code style="color: #fff">Lilongwe</code><br>
               <code>Area 25</code><br>
               <code>Malawi</code>
              </p> 
-                 <hr>
-             <p style="margin-left: 20px;"> 
+                
+             <p style="margin-left: 20px;" class="contentbox"> 
               <img class="icons" src="email icon.jpeg" alt="email icon in this site"><br>
               <code style="color: #fff">Email</code><br>
               <code>chipwereexvin@gmail.com</code><br>
@@ -156,7 +163,7 @@
         </div>
         <br>
         <p style="color: #fff;">IF YOU GOT ANY QUESTIONS</p>
-        <p style="color: #fff;">PLEASE DO NOT HESTATE TO SEND US A MESSAGE</p>
+        <p style="color: #df9c0b;">PLEASE DO NOT HESTATE TO SEND US A MESSAGE</p>
         <form  class="form" action="" method="post">
            <input type="text" required name="fullname" placeholder="Enter Your Full Name">
            <input type="email" required name="email" placeholder="Enter A valid Email Account">
