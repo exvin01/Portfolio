@@ -23,7 +23,7 @@ app.post('/submit', async (req, res) => {
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: 'New submission',
+      subject: 'New submission From Portfolio',
       text: `Name: ${fullname}\nEmail: ${email}\nDescription from the portfolio: ${description}`
     });
     res.send('Submission received!');
