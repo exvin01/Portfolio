@@ -4,8 +4,196 @@
 
 <head>
   <title>Exvin's portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  
 </head>
+  <style>
+  body{
+       margin: 50px;
+      font-family: 'Courier New', monospace;
+      background: #3c434a;
+      display: grid;
+      justify-content: center;
+     }
+     .menu{
+         display: flex;
+         justify-content: space-between;
+         border: 1px solid #fff;
+         font-size: 2em;
+         padding: 30px;
+         padding-top: 25px;
+         padding-bottom: 25px;
+         text-align: center;
+         margin-left: 10%;
+         background: darkgrey;
+         color: #fff;
+         position: fixed;
+         width: 70%;
+         z-index: 100;
+     }
+     .menu:hover{
+          transform: scale(1.10);
+     }
+
+    .image{
+        display: grid;
+        text-align: center;
+        justify-items: center;
+        margin-top: 120px;;
+        font-size: 2em;
+        font-family: Courier New, monospace;
+        color: green;
+        text-shadow: 0 1px 1px green;
+     background: linear-gradient(to bottom, #000428, #004e92);
+        border-radius: 20px;
+        height: auto;
+        padding: 50px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+   }
+
+   .intro{
+        display: grid;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: 2px solid #fff;
+        border-radius: 20px;
+        width: auto;
+        height: auto;
+        color: #eee;
+        margin: 50px;
+        background-color: #000428;
+        font-size: 2.5em;
+        padding: 50px;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 1);   
+   }
+   .getservice{
+        justify-content: center;
+        margin: auto;
+       animation: blink 1s infinite;
+       font-size: 4em;
+       background-color: #000428;
+       color: #fff;
+       margin-bottom: 20px;
+       border: 2px solid #fff;
+   }
+   @keyframes blink{
+       0%    {opacity: 1;}
+       50%  {opacity: 0.5;}
+       100% {opacity: 1;}
+   }
+
+   .getservice:hover{
+             transform: scale(1.10);
+   }
+  
+  .provides{
+    background-color: #2c333b;
+      color: #eee;
+       font-size: 4em;
+       padding: 50px;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       width: auto;
+       text-align: center;
+       box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+       margin-top: 50px;
+}
+.department{
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+}
+.servicesicon{
+    height: 170px;
+    width: 170px;
+    border-radius: 90px 90px 90px 90px;
+    margin-left: 50px;
+}
+.footer{
+  height: 100%;
+  margin-left: -5%;
+  margin-right: -5%;
+  background-color: #eee;
+  padding-top: 50px;
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+
+}
+.getintouch{
+    display: flex;
+    justify-content: center;
+    color: #787c82;
+}
+.footerline{
+ display: flex;
+ gap: 30px;
+ justify-content: center;
+ margin-bottom: 50px;
+  color: #787c82;
+}
+.footerline code{
+    cursor: pointer;
+}
+.footerimg{
+ display: flex;
+ gap: 30px;
+ justify-content: center;
+ height: 100px;
+ width: auto;
+ margin: 50px;
+}
+.footerimg img{
+ border-radius: 200px 200px 200px 200px;
+ border: 1px solid #333;
+ cursor: pointer;
+}
+.formbox{
+  font-size: 2em;
+  border: 2px solid #df9c0b;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  width: 800px;
+       border-radius: 12px;
+}
+.form{
+    display: grid;
+    font-size: 2em;
+    margin-bottom: 50px;
+  }
+  .form input{
+    font-size: 0.6em;
+    padding: 17px 45px 17px 16px;
+    margin: 20px;
+    border: none;
+         border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  .form input:hover{
+    transform: scale(1.05);
+  }
+  .form textarea{
+    font-size: 0.6em;
+    padding: 17px 45px 17px 16px;
+    margin: 20px;
+    border: none;
+         border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  }
+  .form textarea:hover{
+    transform: scale(1.05);
+  }
+  .form button{
+    font-size: 0.7em;
+    background-color: #df9c0b;
+    color: #000;
+    border: none;
+    justify-content: center;
+    margin: auto;
+    padding: 10px;
+    margin-top: 20px;
+         border-radius: 12px;
+  }
+</style>
 <body>
     <!-- Header bar!-->
  <div class="menu">
