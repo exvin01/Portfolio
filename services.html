@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exvin Portfolio | Services & Items</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Exvin <span>Portfolio</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle"><i data-lucide="sun"></i><i data-lucide="moon"></i></button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section page-header">
+    <div class="container animate-up">
+      <h1>Services & Products</h1>
+      <p>Everything you need for your IT setup</p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-2">
+        
+        <div class="service-card animate-up" id="infrastructure">
+          <img src="infrastructor.jpeg" alt="IT Infrastructure" class="lightbox-img">
+          <h3>Building IT Infrastructures</h3>
+          <ul>
+            <li>Custom PC and gaming builds</li>
+            <li>Website design and development</li>
+            <li>Hardware and software setup</li>
+          </ul>
+        </div>
+
+        <div class="service-card animate-up" id="networking" style="animation-delay: 0.1s">
+          <img src="networking.jpeg" alt="Networking" class="lightbox-img">
+          <h3>Networking</h3>
+          <ul>
+            <li>Network architecture design</li>
+            <li>Router, switch, firewall configuration</li>
+            <li>Remote desktop setup and support</li>
+          </ul>
+        </div>
+
+        <div class="service-card animate-up" id="sales" style="animation-delay: 0.2s">
+          <img src="sales.jpeg" alt="IT Equipment" class="lightbox-img">
+          <h3>IT Equipment Sales</h3>
+          <ul>
+            <li>Printers, computers, laptops</li>
+            <li>Routers, switches, RAM, SSD/HDD</li>
+            <li>All items at competitive prices</li>
+          </ul>
+        </div>
+
+        <div class="service-card animate-up" style="animation-delay: 0.3s">
+          <img src="security1.jpeg" alt="Security" class="lightbox-img">
+          <h3>Security & Training</h3>
+          <ul>
+            <li>Security policy development</li>
+            <li>System hardening and monitoring</li>
+            <li>IT courses: web dev, graphics, MS Office</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightboxImg">
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Exvin Portfolio</h3><p>Empowering businesses with reliable IT solutions since 2019.</p></div>
+        <div><h3>Quick Links</h3><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+        <div><h3>Services</h3><a href="#networking">Networking</a><a href="#security">Security</a></div>
+        <div><h3>Follow Me</h3><div class="social-links">
+          <a href="#"><img src="instagram icon.jpeg" alt="ig image here"></a>
+            <a href="#"><img src="facebook icon.jpeg" alt="fb image here"></a>
+            <a href="#"><img src="whatsapp icon.jpeg" alt="wapp image here"></a>
+            <a href="#"><img src="website icon.jpeg" elitsolutions web image here></a>
+        </div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Exvin Chipwere. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i data-lucide="arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>

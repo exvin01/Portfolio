@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exvin Portfolio | Contact</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor"></div>
+  <div class="cursor-follower"></div>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Exvin <span>Portfolio</span></a>
+      <nav class="nav" id="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle"><i data-lucide="sun"></i><i data-lucide="moon"></i></button>
+        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="section page-header">
+    <div class="container animate-up">
+      <h1>Get in Touch</h1>
+      <p>Tell me about your project and I’ll get back to you</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="contact-info animate-up">
+        <h3>Contact Info</h3>
+        <p><code class="contact-info-code">Email: </code><a href="mailto:chipwereexvin@gmail.com">chipwereexvin@gmail.com</a></p>
+        <p><code class="contact-info-code">Phone: </code><a href="tel:+265985091034">+265 985 091 034</a></p>
+        <p><code class="contact-info-code">Location: </code>Lilongwe, Malawi</p>
+        
+        <h3>Follow Me</h3>
+        <div class="social-links">
+          <a href="#"><img src="instagram icon.jpeg" alt="ig image here"></a>
+            <a href="#"><img src="facebook icon.jpeg" alt="fb image here"></a>
+            <a href="#"><img src="whatsapp icon.jpeg" alt="wapp image here"></a>
+            <a href="#"><img src="website icon.jpeg" elitsolutions web image here></a>
+        </div>
+      </div>
+
+      <form action="/contact" method="post" class="contact-form animate-up" id="contactForm" style="animation-delay: 0.2s">
+        <div class="form-group">
+          <p>Full Name</p>
+          <input type="text" name="fullname" placeholder="Full Name" required>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <p>Email</p>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <span class="error-msg"></span>
+        </div>
+        <div class="form-group">
+          <p>Message</p>
+          <textarea name="message" rows="6" placeholder="Describe your service or project" required></textarea>
+          <span class="error-msg"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+        <p class="form-success" id="formSuccess">Message sent! I’ll reply soon.</p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h3>Exvin Portfolio</h3><p>Empowering businesses with reliable IT solutions since 2019.</p></div>
+        <div><h3>Quick Links</h3><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div>
+        <div><h3>Services</h3><a href="services.html#networking">Networking</a><a href="services.html#security">Security</a></div>
+        <div><h3>Follow Me</h3><div class="social-links">
+          <a href="#"><img src="instagram icon.jpeg" alt="ig image here"></a>
+            <a href="#"><img src="facebook icon.jpeg" alt="fb image here"></a>
+            <a href="#"><img src="whatsapp icon.jpeg" alt="wapp image here"></a>
+            <a href="#"><img src="website icon.jpeg" elitsolutions web image here></a>
+        </div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 Exvin Chipwere. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i data-lucide="arrow-up"></i></button>
+  <script src="script.js"></script>
+</body>
+</html>
