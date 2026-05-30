@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 //routing
 const nodemailer = require('nodemailer');
-const transporter = nodemailer.creatTransport({
+const transporter = nodemailer.createTransport({
     host: process.env.HOST,
     port: process.env.PORT,
     auth:{
