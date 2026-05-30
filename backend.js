@@ -32,7 +32,7 @@ app.post('/contact', async (req, res) => {
                <P><strong>Regard</strong></P>
                 <P><strong>Exvin Chipwere</strong></P>
             `,
-            replyto: email,
+            replyTo: email,
         })
         //send noticication to email
         await transporter.sendMail({
