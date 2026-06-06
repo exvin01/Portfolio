@@ -95,24 +95,19 @@
   <button class="back-to-top" id="backToTop"><i data-lucide="arrow-up"></i></button>
   <script src="script.js"></script>
   <script>
-document.getElementById('contactForm').onsubmit = async (e) => {
-  e.preventDefault()
-  const form = e.target
-  const data = new FormData(form)
-  
-  const res = await fetch('/contact', {
-    method: 'POST',
-    body: data
-  })
-  
-  if(res.ok) {
-    document.getElementById('formSuccess').style.display = 'block'
-    form.reset()
-  } else {
-    alert('Error sending message')
-  }
+const res = await fetch('/contact', {
+  method: 'POST',
+  body: data
+})
+
+const text = await res.text() // read response
+
+if(res.ok) {
+  document.getElementById('formSuccess').style.display = 'block'
+  form.reset()
+} else {
+  alert(text) // shows real error instead of "Error sending message"
 }
-</script>
-<style>.form-success{display:none;color:green}</style>
+  </script>
 </body>
 </html>
