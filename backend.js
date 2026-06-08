@@ -33,7 +33,7 @@ const transporter = nodemailer.createTransport({
     secure: process.env.PORT == 465, // true for 465
     auth: {
         user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS, // Gmail App Password
+        pass: process.env.EMAIL_PASS, 
     }
 });
 
@@ -59,17 +59,22 @@ app.post('/contact', async (req, res) => {
         // 2. Send email to yourself
         await transporter.sendMail({
             from: `"Exvin Portfolio" <${process.env.EMAIL_USER}>`,
-            to: process.env.EMAIL_USER, // your email
+            to: process.env.EMAIL_USER,
             subject: 'NEW MESSAGE FROM PORTFOLIO',
-            html: `
+            html: `<!DOCTYPE html>
+            <html style="background-color: #eee;">
+            <body style="background-color: #e6e0e0; text-align: center; margin: auto; overflow: hidden;">
             <h1>NEW SUBMISSION FROM PORTFOLIO CONTACT PAGE</h1>
             <p><strong>Name:</strong> ${fullname}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>Message:</strong> ${message}</p>
             <p><strong>Regards,</strong></p>
             <p><strong>Exvin Chipwere</strong></p>
+            </body>
+             </html>
+            
             `,
-            replyTo: email, // fixed: replyTo not replyto
+            replyTo: email,
         });
 
         // 3. Send confirmation to user
@@ -77,13 +82,17 @@ app.post('/contact', async (req, res) => {
             from: `"Exvin Chipwere" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'SUBMISSION NOTIFICATION FROM EXVIN WEBSITE',
-            html: `
+            html: `<!DOCTYPE html>
+            <html style="background-color: #eee;">
+            <body style="background-color: #e6e0e0; text-align: center; margin: auto; overflow: hidden;">
             <h1>Hi ${fullname},<br>THANKS FOR CONTACTING ENGINEER EXVIN</h1>
             <p>We'll be back to you soon by your email</p>
             <p>Please be patient</p>
             <p><strong>Have a good day</strong></p>
             <p><strong>Regards,</strong></p>
             <p><strong>Engineer E.Chipwere</strong></p>
+            </body>
+            </html>
             `,
         });
 
@@ -103,9 +112,6 @@ app.get('/contact.html', (req, res) =>{
     res.sendFile(path.join(__dirname, 'contact.html'));
 });
 
-// For Vercel serverless
+
 module.exports = app;
 
-// For local testing: uncomment below
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`Server running on ${PORT}`));
