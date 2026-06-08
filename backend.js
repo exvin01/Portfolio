@@ -52,7 +52,7 @@ app.post('/contact', async (req, res) => {
             fullname,
             email,
             message,
-            createdAt: new Date(),
+            createdAt: new Date().toLocaleString('en-CA', {timeZone: 'Africa/Blantyre'}),
             ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress
         });
 
