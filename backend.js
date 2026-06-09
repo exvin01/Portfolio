@@ -63,7 +63,7 @@ app.post('/contact', async (req, res) => {
             subject: 'NEW MESSAGE FROM PORTFOLIO',
             html: `<!DOCTYPE html>
             <html style="background-color: #eee;">
-            <body style="background-color: #e6e0e0; margin: 50px; overflow: hidden;">
+            <body style="overflow: hidden;">
             <h3>NEW SUBMISSION FROM PORTFOLIO CONTACT PAGE</h3>
             <p><strong>Name:</strong> ${fullname}</p>
             <p><strong>Email:</strong> ${email}</p>
@@ -83,7 +83,7 @@ app.post('/contact', async (req, res) => {
             subject: 'SUBMISSION NOTIFICATION FROM EXVIN WEBSITE',
             html: `<!DOCTYPE html>
             <html style="background-color: #eee;">
-            <body style="background-color: #e6e0e0; margin: 50px; overflow: hidden;">
+            <body style="overflow: hidden;">
             <h3>Hi ${fullname},<br>THANKS FOR CONTACTING ENGINEER EXVIN</h3>
             <p>We'll be back to you soon by your email</p>
             <p>Please be patient</p>
