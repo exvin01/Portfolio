@@ -2,12 +2,11 @@ const express = require('express');
 const path = require('path');
 const { MongoClient } = require('mongodb');
 const nodemailer = require('nodemailer');
-const fs = require('fs')
+const fs = require('fs');
 
 const app = express();
 
-// Static files + parse body
-app.use(express.static(__dirname));
+// Parse body
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -26,12 +25,12 @@ async function connectDB() {
   return db;
 }
 
-// Nodemailer transporter - fixed typo: createTransport
+// Nodemailer transporter
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // use 'gmail' if HOST/PORT not set
+    service: 'gmail',
     host: process.env.HOST,
     port: process.env.PORT,
-    secure: process.env.PORT == 465, // true for 465
+    secure: process.env.PORT == 465,
     auth: {
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS, 
@@ -71,9 +70,7 @@ app.post('/contact', async (req, res) => {
             <p><strong>Message:</strong> ${message}</p>
             <p><strong>Regards,</strong><br><strong>Exvin Chipwere</strong></p>
             </body>
-             </html>
-            
-            `,
+             </html>`,
             replyTo: email,
         });
 
@@ -91,8 +88,7 @@ app.post('/contact', async (req, res) => {
             <p><strong>Have a good day</strong></p>
             <p><strong>Regards,</strong><br><strong>Engineer E.Chipwere</strong></p>
             </body>
-            </html>
-            `,
+            </html>`,
         });
 
         res.send('Submission Received ✅');
@@ -102,21 +98,32 @@ app.post('/contact', async (req, res) => {
     }
 });
 
-// Routes - fixed duplicate '/'
+// ===== CLEAN URL ROUTES =====
+
+// Home page
 app.get('/', (req, res) =>{
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.get('/:page/', (req, res, next) =>{
-    const filePath = path.resolve(__dirname, req.params.page + '.html');
-
-    fs.access(filePath, fs.constants.F_OK, (err) =>{
-        if (err) return next();
+// Handle all clean URLs: /about/ /contact/ /services/
+app.get('/:page/', (req, res, next) => {
+    const page = req.params.page;
+    const filePath = path.resolve(__dirname, page + '.html');
+    
+    console.log('Looking for file:', filePath); // Check Vercel logs if still 404
+    
+    fs.access(filePath, fs.constants.F_OK, (err) => {
+        if (err) {
+            console.log('File not found:', filePath);
+            return next(); // let 404 handler below run
+        }
         res.sendFile(filePath);
     });
-    
 });
 
+// 404 handler - runs if file doesn't exist
+app.use((req, res) => {
+    res.status(404).send('404 - Page Not Found');
+});
 
 module.exports = app;
-

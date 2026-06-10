@@ -3,10 +3,7 @@
   "builds": [
     {
       "src": "backend.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": ["**/*"]
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -16,8 +13,8 @@
       "status": 308
     },
     {
-      "src": "^/([^.]+)$",
-      "dest": "/$1.html"
+      "src": "/((?!api).*)\\.(css|js|png|jpg|jpeg|svg|ico|webp|woff|woff2)$",
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",
