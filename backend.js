@@ -104,19 +104,11 @@ app.post('/contact', async (req, res) => {
 
 // Routes - fixed duplicate '/'
 app.get('/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.get('/contact/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'contact.html'))
-
-});
-app.get('/about/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'about.html'))
-
-});
-app.get('/services/', (req, res) =>{
-    res.sendFile(path.resolve(__dirname, 'services.html'))
+app.get('contact.html', (req, res) =>{
+    res.sendFile(path.join(__dirname, 'contact.html'))
 
 });
     
