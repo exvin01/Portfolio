@@ -1,18 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "backend.js",
-            "use": "@vercel/node",
-            "config": {
-                "includeFiles": ["**/*"]
-            }
-        }
-    ],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "backend.js"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["**/*"]
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "^/(.*)\\.html$",
+      "headers": { "Location": "/$1/" },
+      "status": 308
+    },
+    {
+      "src": "^/([^.]+)$",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "backend.js"
+    }
+  ]
 }
