@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const { MongoClient } = require('mongodb');
 const nodemailer = require('nodemailer');
+const fs = require('fs')
 
 const app = express();
 
@@ -107,10 +108,11 @@ app.get('/', (req, res) =>{
 });
 
 app.get('/:page/', (req, res, next) =>{
-    const page = req.params.page;
-    const filePath = path.join(__dirname, page + '.html');
-    res.sendFile(filePath, (err) =>{
-        if (err) next();
+    const filePath = path.resolve(__dirname, req.params.page + '.html');
+
+    fs.access(filePath, fs.constants.F_OK, (err) =>{
+        if (err) return next();
+        res.sendFile(filePath);
     });
     
 });
